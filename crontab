@@ -1,1 +1,2 @@
 * * * * * cd ~/grive && grive
+*/10 * * * * aptitude search '~U' > /tmp/listOfUpgrades
