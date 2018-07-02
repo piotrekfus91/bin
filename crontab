@@ -1,2 +1,3 @@
 * * * * * cd ~/grive && grive
 */10 * * * * aptitude search '~U' > /tmp/listOfUpgrades
+*/10 * * * * update-config-repositories.sh
