@@ -2,9 +2,7 @@
 
 scrip_dir=$(dirname "$0")
 
-declare -a repos=(
-    "https://github.com/powerline/fonts"
-)
+declare -a repos=( "https://github.com/powerline/fonts" "https://github.com/junegunn/fzf.git")
 
 verify_actual() {
     repo=$1
@@ -30,6 +28,6 @@ mkdir -p repos
 
 rm -f /tmp/non-actual-repos
 
-for repo in "${repos[$@]}" ; do
+for repo in "${repos[@]}" ; do
     verify_actual $repo
 done
