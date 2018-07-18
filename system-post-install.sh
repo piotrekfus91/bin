@@ -17,6 +17,7 @@ add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner
 add-apt-repository ppa:pbek/qownnotes -y
 add-apt-repository ppa:aacebedo/fasd -y
 apt-add-repository ppa:fish-shell/release-2 -y
+add-apt-repository ppa:git-core/ppa -y
 
 sudo aptitude update
 
