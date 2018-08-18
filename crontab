@@ -1,6 +1,6 @@
 PATH=$PATH
 
 * * * * * cd ~/grive && grive
-*/10 * * * * aptitude search '~U' > /tmp/listOfUpgrades
-*/10 * * * * ~/Programowanie/Bash/bin/update-config-repositories.sh
-*/10 * * * * ~/Programowanie/Bash/bin/update-apps.sh > /tmp/update-apps.log 2>&1
+47 * * * * aptitude search '~U' > /tmp/listOfUpgrades
+27 * * * * ~/Programowanie/Bash/bin/update-config-repositories.sh
+7 * * * * ~/Programowanie/Bash/bin/update-apps.sh > /tmp/update-apps.log 2>&1
