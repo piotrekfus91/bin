@@ -63,9 +63,14 @@ def notify_of_version_mismatch(app, latest_version, current_version, notify_file
 def close_file(file):
     file.close()
 
+def remove_file_if_empty(file_path):
+    if os.stat(file_path).st_size == 0:
+        os.remove(file_path)
+
 if __name__ == '__main__':
     ensure_app_folder_exists()
     notify_file = recreate_notification_file()
     for app in apps:
         install_or_update(app, notify_file)
     close_file(notify_file)
+    remove_file_if_empty(notification_file_path)
