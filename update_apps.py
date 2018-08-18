@@ -42,14 +42,17 @@ def get_all_versions(releases):
 
 def get_latest_version(versions):
     versions.sort(key = lambda x: x.split('.'))
-    return versions[-1]
+    return stripV(versions[-1])
+
+def stripV(version):
+    return version[1:] if version.startswith('v') else version
 
 def get_current_version(app):
     app_path = apps_dir + app.app_name
     if not os.path.exists(app_path):
         return None
     version_str = subprocess.check_output([apps_dir + app.app_name, '--version']).strip()
-    return app.version_parser(version_str)
+    return stripV(app.version_parser(version_str))
 
 def notify_of_version_mismatch(app, latest_version, current_version, notify_file):
     if (current_version == None):
