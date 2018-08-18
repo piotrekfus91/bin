@@ -2,7 +2,7 @@
 
 scrip_dir=$(dirname "$0")
 
-declare -a repos=( "https://github.com/powerline/fonts" "https://github.com/junegunn/fzf.git")
+declare -a repos=( "https://github.com/powerline/fonts" "https://github.com/junegunn/fzf")
 
 verify_actual() {
     repo=$1
