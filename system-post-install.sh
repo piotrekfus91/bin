@@ -18,6 +18,7 @@ add-apt-repository ppa:pbek/qownnotes -y
 add-apt-repository ppa:aacebedo/fasd -y
 apt-add-repository ppa:fish-shell/release-2 -y
 add-apt-repository ppa:git-core/ppa -y
+add-apt-repository ppa:linrunner/tlp -y
 
 sudo aptitude update
 
@@ -25,7 +26,7 @@ print_setup "Installing updates..."
 aptitude upgrade -y
 
 print_setup "Installing packages..."
-aptitude install -y terminator arj zip unzip rar unrar krename krusader unace samba aptitude vim transmission-gtk fish kget kompare pidgin skype ubuntu-gnome-desktop gnome-session samba git maven cmake vim dropbox grive sublime-text htop nixnote apcalc gufw monodevelop monodevelop-nunit mono-complete docker.io cmake-qt-gui texlive-fonts-recommended texlive-fonts-extra texlive-latex-base texlive-lang-polish texlive-latex-extra texlive-science texmaker gimp mplayer2 octave keepass2 myspell-pl virtualbox-qt nautilus-dropbox curl httpie tree tmux xsane atom nmon wireshark-qt python-pip thefuck ksuperkey sshpass libgnome2-gconf-perl libexpect-perl libnet-proxy-perl libyaml-perl libcrypt-cbc-perl libcrypt-blowfish-perl libgtk2-gladexml-perl libgtk2-ex-simple-list-perl libnet-arp-perl libossp-uuid-perl libcrypt-rijndael-perl libgtk2-unique-perl libxml-xpath-perl jq ctags xbindkeys xautomation x11-utils vim-gtk fasd libappindicator1 stow exuberant-ctags python3-csvkit
+aptitude install -y terminator arj zip unzip rar unrar krename krusader unace samba aptitude vim transmission-gtk fish kget kompare pidgin skype ubuntu-gnome-desktop gnome-session samba git maven cmake vim dropbox grive sublime-text htop nixnote apcalc gufw monodevelop monodevelop-nunit mono-complete docker.io cmake-qt-gui texlive-fonts-recommended texlive-fonts-extra texlive-latex-base texlive-lang-polish texlive-latex-extra texlive-science texmaker gimp mplayer2 octave keepass2 myspell-pl virtualbox-qt nautilus-dropbox curl httpie tree tmux xsane atom nmon wireshark-qt python-pip thefuck ksuperkey sshpass libgnome2-gconf-perl libexpect-perl libnet-proxy-perl libyaml-perl libcrypt-cbc-perl libcrypt-blowfish-perl libgtk2-gladexml-perl libgtk2-ex-simple-list-perl libnet-arp-perl libossp-uuid-perl libcrypt-rijndael-perl libgtk2-unique-perl libxml-xpath-perl jq ctags xbindkeys xautomation x11-utils vim-gtk fasd libappindicator1 stow exuberant-ctags python3-csvkit tlp tlp-rdw
 
 print_setup "Setting fish as primary console..."
 usermod -s /usr/bin/fish pfus
