@@ -15,7 +15,8 @@ notification_file_path = '/tmp/apps_versions'
 apps_dir = os.path.expanduser('~/apps/bin/')
 apps = [
     App(repo = 'ogham/exa', app_name = 'exa', version_parser = lambda str: str[(len('exa ')):]),
-    App(repo = 'sharkdp/bat', app_name = 'bat', version_parser = lambda str: str[(len('bat ')):])
+    App(repo = 'sharkdp/bat', app_name = 'bat', version_parser = lambda str: str[(len('bat ')):]),
+    App(repo = 'sharkdp/fd', app_name = 'fd', version_parser = lambda str: str[(len('fd ')):])
 ]
 
 def ensure_app_folder_exists():
