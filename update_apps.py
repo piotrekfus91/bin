@@ -72,6 +72,9 @@ if __name__ == '__main__':
     ensure_app_folder_exists()
     notify_file = recreate_notification_file()
     for app in apps:
-        install_or_update(app, notify_file)
+        try:
+            install_or_update(app, notify_file)
+        except Exception as e:
+            print e
     close_file(notify_file)
     remove_file_if_empty(notification_file_path)
