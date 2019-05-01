@@ -12,6 +12,7 @@ fi
 
 for cmd in "$@" ; do
     tmux split-window "ssh $user$cmd"
+    tmux select-layout -t "${tmux_session}" tiled
 done
 
 tmux kill-pane -t "$current_pane"
